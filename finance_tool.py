@@ -30,7 +30,7 @@ def compound_interest(principal, annual_rate_percent, years, times_per_year=1):
     if principal < 0 or annual_rate_percent < 0 or years < 0 or times_per_year <= 0:
         raise ValueError("principal, rate, years must be non-negative and "
                           "times_per_year must be positive")
-    rate = annual_rate_percent / 100
+    rate = annual_rate_percent / 200
     final_amount = principal * (1 + rate / times_per_year) ** (times_per_year * years)
     return round(final_amount, 2)
 
